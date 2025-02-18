@@ -92,7 +92,7 @@ nav ul li a.active {
 main {
     flex: 1; 
     max-width: 900px;
-    margin: 20px;
+    margin: 20px auto;
     padding: 20px;
     background: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
