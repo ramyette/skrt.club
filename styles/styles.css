@@ -9,10 +9,12 @@ html, body {
 }
 
 body {
+    background: url('../images/paper.jpg') repeat;
+    background-size: cover;
     font-family: "Gill Sans", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: #f8f8f814;
     color: #333;
 }
 
@@ -24,9 +26,38 @@ header {
     text-align: center;
 }
 
-.emoji {
-    font-family: emoji;
-  }  
+h1, h2 {
+    transform: rotate(-2deg);
+}
+
+h3 {
+    transform: rotate(-1deg);
+}
+
+p {
+    transform: rotate(1deg);
+    display: inline-block;
+}
+
+/* Main Content */
+main {
+    flex: 1; 
+    max-width: 800px;
+    min-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    box-shadow: 0 0 11px rgba(0, 0, 0, 0.1);
+    border: 2px solid #e8e1d8;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgpa(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 /* Hero Section */
 .hero {
@@ -38,6 +69,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Hero Text */
@@ -86,23 +118,6 @@ nav ul li a {
 
 nav ul li a.active {
     border-bottom: 2px solid #ff4757;
-}
-
-/* Main Content */
-main {
-    flex: 1; 
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Product Grid */
