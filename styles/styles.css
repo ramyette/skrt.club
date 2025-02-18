@@ -162,3 +162,12 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+a {
+    color: blue; /* or any color you want */
+    text-decoration: none;
+}
+
+a:visited {
+    color: blue; /* Keep it the same as the normal link color */
+}
