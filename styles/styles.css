@@ -86,7 +86,9 @@ p {
     }
 }
 
-
+.page-wrapper {
+    position: relative;
+}
 
 .home-main {
     display: flex;
@@ -113,23 +115,25 @@ p {
 /* Graffiti (Stuck to Notebook) */
 .graffiti {
     position: absolute; /* Stuck to the notebook */
-    top: 26%; /* Adjust as needed */
-    left: 50%;
+    top: -3%; /* Adjust as needed */
+    left: 21%;
     transform: translate(-50%, -50%); /* Centers it exactly */
     width: 60%; /* Adjust size relative to notebook */
     max-width: 100%;
     height: auto;
-    animation: bounceScale 2s infinite ease-in-out;
+    animation: bounceScaleRotate 2s infinite ease-in-out;
     filter: drop-shadow(0px 0px 30px rgba(220, 13, 186, 0.5));
+    will-change: transform;
+    transform-origin: center center;
 }
 
 
-@keyframes bounceScale {
+@keyframes bounceScaleRotate {
     0%, 100% {
-        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+        transform: scale(1) rotate(0deg);
     }
     50% {
-        transform: translate(-50%, -50%) scale(1.1) rotate(3deg); /* Rotates slightly */
+        transform: scale(1.05) rotate(3deg); /* Smaller scale to prevent shifting */
     }
 }
 
@@ -285,7 +289,7 @@ footer {
     text-align: center;
     background: rgba(0 0 0 0);
     color: white;
-    position: absolute; /*Prevents overlap*/
+    position: relative; /*Prevents overlap*/
     width: 100%;
     bottom: -50px;
 }
@@ -296,7 +300,7 @@ footer {
     max-width: 8000px;
     height: 100px;
     object-fit: cover;
-    position: absolute;
+    position: relative;
     left: 50%;
     bottom: 100%;
     transform:translateX(-50%);
